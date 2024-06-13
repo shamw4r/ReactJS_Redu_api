@@ -18,6 +18,7 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Search by name"
         value={searchTerm}
         onChange={handleChange}
+        style={{ border: '1px solid #ccc', borderRadius: '4px', padding: '8px', marginBottom: '10px' }} // Inline styles
       />
     </div>
   );

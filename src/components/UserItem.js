@@ -45,11 +45,11 @@ const UserItem = ({ user, onDelete }) => {
       <td>
       {isEditing ? (
           <>
-            <button onClick={handleSave}>Save</button>
+            <button onClick={handleSave}>Save</button>&nbsp;&nbsp;&nbsp;
             <button onClick={() => setIsEditing(false)}>Cancel</button>
           </>
         ) : (<>
-          <button onClick={handleEdit}>Edit</button>
+          <button onClick={handleEdit}>Edit</button>&nbsp;&nbsp;&nbsp;
           <button onClick={handleDelete}>Delete</button>
         </>)
   }
