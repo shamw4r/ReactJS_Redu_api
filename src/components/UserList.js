@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsers } from '../store/actions/userActions';
+// src/components/UserList.js
+
+import React from 'react';
 import UserItem from './UserItem';
 
-const UserList = () => {
-  const dispatch = useDispatch();
-  const { users, loading, error } = useSelector(state => state.users);
-
-  useEffect(() => {
-    dispatch(fetchUsers());
-  }, [dispatch]);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-
+const UserList = ({ users, onDelete }) => {
   return (
     <div className="user-list">
       <h2>User List</h2>
@@ -28,7 +18,7 @@ const UserList = () => {
         </thead>
         <tbody>
           {users.map(user => (
-            <UserItem key={user.id} user={user} />
+            <UserItem key={user.id} user={user} onDelete={onDelete}  />
           ))}
         </tbody>
       </table>

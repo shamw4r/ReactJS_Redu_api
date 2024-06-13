@@ -1,0 +1,19 @@
+/* src/components/Filter.css */
+
+.Filter {
+    margin-bottom: 20px;
+  }
+  
+  .Filter label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .Filter input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

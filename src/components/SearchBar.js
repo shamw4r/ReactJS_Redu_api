@@ -1,15 +1,25 @@
+// src/components/SearchBar.js
+
 import React, { useState } from 'react';
 
-const SearchBar = ({ handleSearch }) => {
-  const [query, setQuery] = useState('');
+const SearchBar = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-    handleSearch(e.target.value);
+  const handleChange = event => {
+    const value = event.target.value;
+    setSearchTerm(value);
+    onSearch(value); // Call the onSearch function with the search term
   };
 
   return (
-    <input type="text" value={query} onChange={handleChange} placeholder="Search by name" />
+    <div className="SearchBar">
+      <input
+        type="text"
+        placeholder="Search by name"
+        value={searchTerm}
+        onChange={handleChange}
+      />
+    </div>
   );
 };
 

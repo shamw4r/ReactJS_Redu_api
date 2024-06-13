@@ -27,6 +27,13 @@ export const fetchUsersFailure = (error) => ({
   payload: error
 });
 
+export const filterUsersByUsername = searchTerm => {
+  return {
+    type: 'FILTER_USERS_BY_USERNAME',
+    payload: searchTerm
+  };
+};
+
 export const deleteUser = (id) => {
   return async (dispatch) => {
     try {
