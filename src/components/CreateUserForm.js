@@ -21,7 +21,7 @@ const CreateUserForm = ({ onUserCreated }) => {
   const handleSubmit = async event => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://jsonplaceholder.typicode.com/users', formData);
+      const response = await axios.post('http://localhost:786/users', formData);
       onUserCreated(response.data); // Pass the newly created user data to the parent component
       setFormData({ // Reset form data after successful creation
         name: '',
